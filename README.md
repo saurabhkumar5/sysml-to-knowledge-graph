@@ -194,4 +194,3 @@ queries/system_analysis.cypher analysis queries
 data/                          generated files (elements, graph, snapshots)
 ```
 
-**Author:** Saurabh Kumar, MSc Artificial Intelligence (Robotics), Berlin
