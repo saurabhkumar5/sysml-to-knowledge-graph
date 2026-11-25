@@ -1,0 +1,1353 @@
+{
+  "nodes": [
+    {
+      "id": "d8ba6f37-f642-4725-adc3-09c27005a529",
+      "label": "PortDef",
+      "props": {
+        "sysml_id": "d8ba6f37-f642-4725-adc3-09c27005a529",
+        "name": "PowerPort",
+        "qualified_name": "CubeSatModel::PowerPort",
+        "sysml_type": "PortDefinition",
+        "doc": "Electrical power interface. out = power leaves the part."
+      }
+    },
+    {
+      "id": "2339975d-631f-41b2-b771-031a194ac0b8",
+      "label": "PortDef",
+      "props": {
+        "sysml_id": "2339975d-631f-41b2-b771-031a194ac0b8",
+        "name": "DataPort",
+        "qualified_name": "CubeSatModel::DataPort",
+        "sysml_type": "PortDefinition",
+        "doc": "Data interface. out = data leaves the part."
+      }
+    },
+    {
+      "id": "409847dd-3132-4268-9012-daa460180d79",
+      "label": "PartDef",
+      "props": {
+        "sysml_id": "409847dd-3132-4268-9012-daa460180d79",
+        "name": "Structure",
+        "qualified_name": "CubeSatModel::Structure",
+        "sysml_type": "PartDefinition",
+        "doc": "3U aluminium frame (10 x 10 x 34 cm) that holds all parts."
+      }
+    },
+    {
+      "id": "811cd2b3-7f7a-497f-9059-f1b1ffe740c2",
+      "label": "PartDef",
+      "props": {
+        "sysml_id": "811cd2b3-7f7a-497f-9059-f1b1ffe740c2",
+        "name": "SolarPanel",
+        "qualified_name": "CubeSatModel::SolarPanel",
+        "sysml_type": "PartDefinition",
+        "doc": "Deployable solar panel that converts sunlight into power."
+      }
+    },
+    {
+      "id": "26d446e8-98d2-44b6-83ba-afd7d3cd7100",
+      "label": "PartDef",
+      "props": {
+        "sysml_id": "26d446e8-98d2-44b6-83ba-afd7d3cd7100",
+        "name": "Battery",
+        "qualified_name": "CubeSatModel::Battery",
+        "sysml_type": "PartDefinition",
+        "doc": "Li-ion battery that stores energy for eclipse periods."
+      }
+    },
+    {
+      "id": "e423b876-1dc8-4cf4-be7d-3f142d0a571f",
+      "label": "PartDef",
+      "props": {
+        "sysml_id": "e423b876-1dc8-4cf4-be7d-3f142d0a571f",
+        "name": "OnBoardComputer",
+        "qualified_name": "CubeSatModel::OnBoardComputer",
+        "sysml_type": "PartDefinition",
+        "doc": "OBC: the brain that controls all subsystems."
+      }
+    },
+    {
+      "id": "0ead1eab-1d34-4bf9-a4a5-2e3a2336beb4",
+      "label": "PartDef",
+      "props": {
+        "sysml_id": "0ead1eab-1d34-4bf9-a4a5-2e3a2336beb4",
+        "name": "Radio",
+        "qualified_name": "CubeSatModel::Radio",
+        "sysml_type": "PartDefinition",
+        "doc": "UHF radio that sends data to the ground station."
+      }
+    },
+    {
+      "id": "3e1f7745-eeea-45d6-a73d-9cd0a2ae787e",
+      "label": "PartDef",
+      "props": {
+        "sysml_id": "3e1f7745-eeea-45d6-a73d-9cd0a2ae787e",
+        "name": "Camera",
+        "qualified_name": "CubeSatModel::Camera",
+        "sysml_type": "PartDefinition",
+        "doc": "Earth-observation camera (the payload)."
+      }
+    },
+    {
+      "id": "ff049094-5f55-4e1b-b04b-037e1577bda0",
+      "label": "PartDef",
+      "props": {
+        "sysml_id": "ff049094-5f55-4e1b-b04b-037e1577bda0",
+        "name": "CubeSat",
+        "qualified_name": "CubeSatModel::CubeSat",
+        "sysml_type": "PartDefinition",
+        "doc": "The whole satellite (system of interest)."
+      }
+    },
+    {
+      "id": "ea2c64ee-52cb-4b83-9f4e-bcbb30e4b090",
+      "label": "Part",
+      "props": {
+        "sysml_id": "ea2c64ee-52cb-4b83-9f4e-bcbb30e4b090",
+        "name": "cubeSat",
+        "qualified_name": "CubeSatModel::cubeSat",
+        "sysml_type": "PartUsage"
+      }
+    },
+    {
+      "id": "ddcfdadd-734e-489d-88ee-3295e692c504",
+      "label": "Part",
+      "props": {
+        "sysml_id": "ddcfdadd-734e-489d-88ee-3295e692c504",
+        "name": "structure",
+        "qualified_name": "CubeSatModel::cubeSat::structure",
+        "sysml_type": "PartUsage",
+        "mass": 1.0,
+        "mass_unit": "kg"
+      }
+    },
+    {
+      "id": "941ce48b-1829-40cf-8837-1dd80fe40b02",
+      "label": "Part",
+      "props": {
+        "sysml_id": "941ce48b-1829-40cf-8837-1dd80fe40b02",
+        "name": "leftPanel",
+        "qualified_name": "CubeSatModel::cubeSat::leftPanel",
+        "sysml_type": "PartUsage",
+        "mass": 0.2,
+        "mass_unit": "kg",
+        "powerOutput": 7.0,
+        "powerOutput_unit": "W"
+      }
+    },
+    {
+      "id": "5fd7d566-eba0-44f7-851b-3f4fcfce4c66",
+      "label": "Part",
+      "props": {
+        "sysml_id": "5fd7d566-eba0-44f7-851b-3f4fcfce4c66",
+        "name": "rightPanel",
+        "qualified_name": "CubeSatModel::cubeSat::rightPanel",
+        "sysml_type": "PartUsage",
+        "mass": 0.2,
+        "mass_unit": "kg",
+        "powerOutput": 7.0,
+        "powerOutput_unit": "W"
+      }
+    },
+    {
+      "id": "d692f468-09dc-4e17-b257-e7fc93145d91",
+      "label": "Part",
+      "props": {
+        "sysml_id": "d692f468-09dc-4e17-b257-e7fc93145d91",
+        "name": "battery",
+        "qualified_name": "CubeSatModel::cubeSat::battery",
+        "sysml_type": "PartUsage",
+        "mass": 0.3,
+        "mass_unit": "kg",
+        "capacity": 72000.0,
+        "capacity_unit": "J"
+      }
+    },
+    {
+      "id": "f1b46696-39e8-4090-9440-f5b2a9dac04c",
+      "label": "Part",
+      "props": {
+        "sysml_id": "f1b46696-39e8-4090-9440-f5b2a9dac04c",
+        "name": "obc",
+        "qualified_name": "CubeSatModel::cubeSat::obc",
+        "sysml_type": "PartUsage",
+        "mass": 0.1,
+        "mass_unit": "kg",
+        "powerConsumption": 1.5,
+        "powerConsumption_unit": "W"
+      }
+    },
+    {
+      "id": "4c01b061-ccb3-48f3-9ef4-86a0589f19e2",
+      "label": "Part",
+      "props": {
+        "sysml_id": "4c01b061-ccb3-48f3-9ef4-86a0589f19e2",
+        "name": "radio",
+        "qualified_name": "CubeSatModel::cubeSat::radio",
+        "sysml_type": "PartUsage",
+        "mass": 0.15,
+        "mass_unit": "kg",
+        "powerConsumption": 2.0,
+        "powerConsumption_unit": "W",
+        "downlinkRate": 9.6
+      }
+    },
+    {
+      "id": "35ad23e4-7e1e-4fd2-89d5-fea07f4a576b",
+      "label": "Part",
+      "props": {
+        "sysml_id": "35ad23e4-7e1e-4fd2-89d5-fea07f4a576b",
+        "name": "camera",
+        "qualified_name": "CubeSatModel::cubeSat::camera",
+        "sysml_type": "PartUsage",
+        "mass": 0.25,
+        "mass_unit": "kg",
+        "powerConsumption": 2.5,
+        "powerConsumption_unit": "W"
+      }
+    },
+    {
+      "id": "fa9b9e2c-9f53-4d05-9c29-731d4d8c7e9d",
+      "label": "Part",
+      "props": {
+        "sysml_id": "fa9b9e2c-9f53-4d05-9c29-731d4d8c7e9d",
+        "name": "heater",
+        "qualified_name": "CubeSatModel::cubeSat::heater",
+        "sysml_type": "PartUsage",
+        "mass": 0.05,
+        "mass_unit": "kg",
+        "powerConsumption": 1.0,
+        "powerConsumption_unit": "W"
+      }
+    },
+    {
+      "id": "613fc8f8-12f5-4769-9109-d6da04586e72",
+      "label": "RequirementDef",
+      "props": {
+        "sysml_id": "613fc8f8-12f5-4769-9109-d6da04586e72",
+        "name": "MassRequirement",
+        "qualified_name": "CubeSatModel::MassRequirement",
+        "sysml_type": "RequirementDefinition",
+        "doc": "The total mass of the satellite shall not exceed the limit."
+      }
+    },
+    {
+      "id": "ec977e45-78bb-4fe2-9411-67430d6caa8c",
+      "label": "RequirementDef",
+      "props": {
+        "sysml_id": "ec977e45-78bb-4fe2-9411-67430d6caa8c",
+        "name": "EclipsePowerRequirement",
+        "qualified_name": "CubeSatModel::EclipsePowerRequirement",
+        "sysml_type": "RequirementDefinition",
+        "doc": "The battery shall supply the load during the whole eclipse."
+      }
+    },
+    {
+      "id": "3fd2c0ed-775b-4a63-8c82-8ef4f29f0900",
+      "label": "Requirement",
+      "props": {
+        "sysml_id": "3fd2c0ed-775b-4a63-8c82-8ef4f29f0900",
+        "name": "r1_mass",
+        "qualified_name": "CubeSatModel::r1_mass",
+        "sysml_type": "RequirementUsage",
+        "massLimit": 4.0,
+        "massLimit_unit": "kg"
+      }
+    },
+    {
+      "id": "263bf9a5-93b2-442b-957f-21a206a6579e",
+      "label": "Requirement",
+      "props": {
+        "sysml_id": "263bf9a5-93b2-442b-957f-21a206a6579e",
+        "name": "r2_eclipsePower",
+        "qualified_name": "CubeSatModel::r2_eclipsePower",
+        "sysml_type": "RequirementUsage",
+        "loadPower": 6.0,
+        "loadPower_unit": "W",
+        "eclipseDuration": 2700.0,
+        "eclipseDuration_unit": "s"
+      }
+    },
+    {
+      "id": "43c2033f-2de1-4041-967d-8cbb3dbcc085",
+      "label": "Requirement",
+      "props": {
+        "sysml_id": "43c2033f-2de1-4041-967d-8cbb3dbcc085",
+        "name": "r3_imageDownlink",
+        "qualified_name": "CubeSatModel::r3_imageDownlink",
+        "sysml_type": "RequirementUsage",
+        "doc": "The satellite shall take an Earth image and send it to the ground station."
+      }
+    },
+    {
+      "id": "fdb6466d-f372-403e-bdd6-1e707c463ecc",
+      "label": "Requirement",
+      "props": {
+        "sysml_id": "fdb6466d-f372-403e-bdd6-1e707c463ecc",
+        "name": "r4_thermalRange",
+        "qualified_name": "CubeSatModel::r4_thermalRange",
+        "sysml_type": "RequirementUsage",
+        "doc": "The internal temperature shall stay between -20 and 60 degC."
+      }
+    },
+    {
+      "id": "e986b6fa-d8b1-4405-b5fe-b47b28e45fcb",
+      "label": "VerificationDef",
+      "props": {
+        "sysml_id": "e986b6fa-d8b1-4405-b5fe-b47b28e45fcb",
+        "name": "MassTest",
+        "qualified_name": "CubeSatModel::MassTest",
+        "sysml_type": "VerificationCaseDefinition",
+        "doc": "Weigh the fully assembled satellite on a calibrated scale."
+      }
+    },
+    {
+      "id": "e16f9021-f6cb-42a3-8a21-2d5c29856dc7",
+      "label": "VerificationDef",
+      "props": {
+        "sysml_id": "e16f9021-f6cb-42a3-8a21-2d5c29856dc7",
+        "name": "EclipseDischargeTest",
+        "qualified_name": "CubeSatModel::EclipseDischargeTest",
+        "sysml_type": "VerificationCaseDefinition",
+        "doc": "Run OBC, radio and camera from the battery only for 45 minutes."
+      }
+    },
+    {
+      "id": "df58678e-0252-4510-835e-2bb2614af57b",
+      "label": "VerificationDef",
+      "props": {
+        "sysml_id": "df58678e-0252-4510-835e-2bb2614af57b",
+        "name": "EndToEndDownlinkTest",
+        "qualified_name": "CubeSatModel::EndToEndDownlinkTest",
+        "sysml_type": "VerificationCaseDefinition",
+        "doc": "Take an image and receive it at a test ground station."
+      }
+    },
+    {
+      "id": "6d6f4832-0fdd-490a-a38b-8fbd298c8a21",
+      "label": "VerificationDef",
+      "props": {
+        "sysml_id": "6d6f4832-0fdd-490a-a38b-8fbd298c8a21",
+        "name": "ThermalVacuumTest",
+        "qualified_name": "CubeSatModel::ThermalVacuumTest",
+        "sysml_type": "VerificationCaseDefinition",
+        "doc": "Test the satellite in a thermal vacuum chamber (-20 to 60 degC)."
+      }
+    },
+    {
+      "id": "3cf7223d-dbb2-4709-8b08-77a1ce726246",
+      "label": "Verification",
+      "props": {
+        "sysml_id": "3cf7223d-dbb2-4709-8b08-77a1ce726246",
+        "name": "massTest",
+        "qualified_name": "CubeSatModel::massTest",
+        "sysml_type": "VerificationCaseUsage"
+      }
+    },
+    {
+      "id": "8887e69c-4c1a-462b-ba0f-430def9fbf7c",
+      "label": "Verification",
+      "props": {
+        "sysml_id": "8887e69c-4c1a-462b-ba0f-430def9fbf7c",
+        "name": "eclipseDischargeTest",
+        "qualified_name": "CubeSatModel::eclipseDischargeTest",
+        "sysml_type": "VerificationCaseUsage"
+      }
+    },
+    {
+      "id": "9f6577db-8651-46e5-a854-638eb95c7006",
+      "label": "Verification",
+      "props": {
+        "sysml_id": "9f6577db-8651-46e5-a854-638eb95c7006",
+        "name": "endToEndDownlinkTest",
+        "qualified_name": "CubeSatModel::endToEndDownlinkTest",
+        "sysml_type": "VerificationCaseUsage"
+      }
+    },
+    {
+      "id": "ee935d4a-fe61-4213-b858-213c6df3a54f",
+      "label": "Verification",
+      "props": {
+        "sysml_id": "ee935d4a-fe61-4213-b858-213c6df3a54f",
+        "name": "thermalVacuumTest",
+        "qualified_name": "CubeSatModel::thermalVacuumTest",
+        "sysml_type": "VerificationCaseUsage"
+      }
+    },
+    {
+      "id": "56932402-f769-4a1f-b22f-ff3615f0dd55",
+      "label": "ItemDef",
+      "props": {
+        "sysml_id": "56932402-f769-4a1f-b22f-ff3615f0dd55",
+        "name": "Image",
+        "qualified_name": "CubeSatModel::Image",
+        "sysml_type": "ItemDefinition",
+        "doc": "Raw Earth image taken by the camera."
+      }
+    },
+    {
+      "id": "b1ff7a91-2893-4c56-9319-d36633212805",
+      "label": "ItemDef",
+      "props": {
+        "sysml_id": "b1ff7a91-2893-4c56-9319-d36633212805",
+        "name": "DataPacket",
+        "qualified_name": "CubeSatModel::DataPacket",
+        "sysml_type": "ItemDefinition",
+        "doc": "Compressed image packet ready for downlink."
+      }
+    },
+    {
+      "id": "53e094d8-f5af-448d-aa7d-49c6fb37dd30",
+      "label": "Signal",
+      "props": {
+        "sysml_id": "53e094d8-f5af-448d-aa7d-49c6fb37dd30",
+        "name": "ImagingCommand",
+        "qualified_name": "CubeSatModel::ImagingCommand",
+        "sysml_type": "AttributeDefinition",
+        "doc": "Command from the ground: take an image."
+      }
+    },
+    {
+      "id": "df46f59b-b99c-4a43-b773-391feda45d6e",
+      "label": "Signal",
+      "props": {
+        "sysml_id": "df46f59b-b99c-4a43-b773-391feda45d6e",
+        "name": "PowerOk",
+        "qualified_name": "CubeSatModel::PowerOk",
+        "sysml_type": "AttributeDefinition",
+        "doc": "Battery is charged enough for normal work."
+      }
+    },
+    {
+      "id": "3415d892-a586-4433-9732-81c92a061e49",
+      "label": "Signal",
+      "props": {
+        "sysml_id": "3415d892-a586-4433-9732-81c92a061e49",
+        "name": "BatteryLow",
+        "qualified_name": "CubeSatModel::BatteryLow",
+        "sysml_type": "AttributeDefinition",
+        "doc": "Battery charge is below the safe limit."
+      }
+    },
+    {
+      "id": "3f255ece-1073-450f-bd65-e296911be56f",
+      "label": "Signal",
+      "props": {
+        "sysml_id": "3f255ece-1073-450f-bd65-e296911be56f",
+        "name": "ImageSent",
+        "qualified_name": "CubeSatModel::ImageSent",
+        "sysml_type": "AttributeDefinition",
+        "doc": "The image packet was sent to the ground."
+      }
+    },
+    {
+      "id": "cc71e9c4-3710-4ec4-a230-40d27dad44cf",
+      "label": "PartDef",
+      "props": {
+        "sysml_id": "cc71e9c4-3710-4ec4-a230-40d27dad44cf",
+        "name": "Operator",
+        "qualified_name": "CubeSatModel::Operator",
+        "sysml_type": "PartDefinition",
+        "doc": "Person at the ground station who commands the satellite."
+      }
+    },
+    {
+      "id": "673aed7a-28e2-423a-84f8-ac27698485dd",
+      "label": "PartDef",
+      "props": {
+        "sysml_id": "673aed7a-28e2-423a-84f8-ac27698485dd",
+        "name": "GroundStation",
+        "qualified_name": "CubeSatModel::GroundStation",
+        "sysml_type": "PartDefinition",
+        "doc": "Antenna on Earth that receives the satellite data."
+      }
+    },
+    {
+      "id": "67e63f42-9a9f-4f2c-8fe3-52bbad7bce0f",
+      "label": "UseCaseDef",
+      "props": {
+        "sysml_id": "67e63f42-9a9f-4f2c-8fe3-52bbad7bce0f",
+        "name": "ObtainEarthImage",
+        "qualified_name": "CubeSatModel::ObtainEarthImage",
+        "sysml_type": "UseCaseDefinition",
+        "doc": "The operator requests an Earth image and receives it on the ground."
+      }
+    },
+    {
+      "id": "230ef79a-b5f1-4c53-a465-6cc1d054c25c",
+      "label": "UseCase",
+      "props": {
+        "sysml_id": "230ef79a-b5f1-4c53-a465-6cc1d054c25c",
+        "name": "obtainEarthImage",
+        "qualified_name": "CubeSatModel::obtainEarthImage",
+        "sysml_type": "UseCaseUsage"
+      }
+    },
+    {
+      "id": "855d01d2-fa31-4d7b-a95b-3d5bfc0654e5",
+      "label": "ActionDef",
+      "props": {
+        "sysml_id": "855d01d2-fa31-4d7b-a95b-3d5bfc0654e5",
+        "name": "CaptureImage",
+        "qualified_name": "CubeSatModel::CaptureImage",
+        "sysml_type": "ActionDefinition",
+        "doc": "Camera takes a raw Earth image."
+      }
+    },
+    {
+      "id": "54a58f3a-88a0-453e-b194-6920819fadc4",
+      "label": "ActionDef",
+      "props": {
+        "sysml_id": "54a58f3a-88a0-453e-b194-6920819fadc4",
+        "name": "ProcessImage",
+        "qualified_name": "CubeSatModel::ProcessImage",
+        "sysml_type": "ActionDefinition",
+        "doc": "OBC compresses the image into a data packet."
+      }
+    },
+    {
+      "id": "12fdeb7e-3369-4a71-a335-26af3396401c",
+      "label": "ActionDef",
+      "props": {
+        "sysml_id": "12fdeb7e-3369-4a71-a335-26af3396401c",
+        "name": "DownlinkImage",
+        "qualified_name": "CubeSatModel::DownlinkImage",
+        "sysml_type": "ActionDefinition",
+        "doc": "Radio sends the packet to the ground station."
+      }
+    },
+    {
+      "id": "1bc23811-ad1a-467a-9798-955552074361",
+      "label": "ActionDef",
+      "props": {
+        "sysml_id": "1bc23811-ad1a-467a-9798-955552074361",
+        "name": "ImagingTask",
+        "qualified_name": "CubeSatModel::ImagingTask",
+        "sysml_type": "ActionDefinition",
+        "doc": "Take an image, compress it and send it to Earth."
+      }
+    },
+    {
+      "id": "cb1f4036-a3ff-43dd-944a-cb993b0e9823",
+      "label": "Action",
+      "props": {
+        "sysml_id": "cb1f4036-a3ff-43dd-944a-cb993b0e9823",
+        "name": "capture",
+        "qualified_name": "CubeSatModel::ImagingTask::capture",
+        "sysml_type": "ActionUsage"
+      }
+    },
+    {
+      "id": "84488461-d252-4ef3-acf0-023b87d14818",
+      "label": "Action",
+      "props": {
+        "sysml_id": "84488461-d252-4ef3-acf0-023b87d14818",
+        "name": "process",
+        "qualified_name": "CubeSatModel::ImagingTask::process",
+        "sysml_type": "ActionUsage"
+      }
+    },
+    {
+      "id": "2576141d-b683-43b5-8bb2-efddaeb4c81b",
+      "label": "Action",
+      "props": {
+        "sysml_id": "2576141d-b683-43b5-8bb2-efddaeb4c81b",
+        "name": "downlink",
+        "qualified_name": "CubeSatModel::ImagingTask::downlink",
+        "sysml_type": "ActionUsage"
+      }
+    },
+    {
+      "id": "efbc8a71-51c6-47bc-bd44-2e82e17f09d5",
+      "label": "Action",
+      "props": {
+        "sysml_id": "efbc8a71-51c6-47bc-bd44-2e82e17f09d5",
+        "name": "imagingTask",
+        "qualified_name": "CubeSatModel::imagingTask",
+        "sysml_type": "ActionUsage"
+      }
+    },
+    {
+      "id": "1db75cae-f6ee-4a53-a280-fa0290cd20da",
+      "label": "StateDef",
+      "props": {
+        "sysml_id": "1db75cae-f6ee-4a53-a280-fa0290cd20da",
+        "name": "OperatingModes",
+        "qualified_name": "CubeSatModel::OperatingModes",
+        "sysml_type": "StateDefinition",
+        "doc": "Safe mode protects the satellite when power is low."
+      }
+    },
+    {
+      "id": "1951b1d0-e7ba-4dab-9e81-59c378e5e489",
+      "label": "State",
+      "props": {
+        "sysml_id": "1951b1d0-e7ba-4dab-9e81-59c378e5e489",
+        "name": "safeMode",
+        "qualified_name": "CubeSatModel::OperatingModes::safeMode",
+        "sysml_type": "StateUsage",
+        "initial": true
+      }
+    },
+    {
+      "id": "a7b41850-7770-4f83-97ce-7a8e6e2e04ba",
+      "label": "State",
+      "props": {
+        "sysml_id": "a7b41850-7770-4f83-97ce-7a8e6e2e04ba",
+        "name": "nominalMode",
+        "qualified_name": "CubeSatModel::OperatingModes::nominalMode",
+        "sysml_type": "StateUsage"
+      }
+    },
+    {
+      "id": "93bb3035-4bad-4da5-98b8-dffd09102169",
+      "label": "State",
+      "props": {
+        "sysml_id": "93bb3035-4bad-4da5-98b8-dffd09102169",
+        "name": "imagingMode",
+        "qualified_name": "CubeSatModel::OperatingModes::imagingMode",
+        "sysml_type": "StateUsage"
+      }
+    },
+    {
+      "id": "f9c798ce-95ed-466b-83ad-e0cf4831e5e4",
+      "label": "Scenario",
+      "props": {
+        "sysml_id": "f9c798ce-95ed-466b-83ad-e0cf4831e5e4",
+        "name": "ImagingScenario",
+        "qualified_name": "CubeSatModel::ImagingScenario",
+        "sysml_type": "OccurrenceDefinition",
+        "doc": "One imaging pass: command goes up, image comes down."
+      }
+    },
+    {
+      "id": "f0e2023d-a810-447b-90a5-bdd7c66401a5",
+      "label": "PartDef",
+      "props": {
+        "sysml_id": "f0e2023d-a810-447b-90a5-bdd7c66401a5",
+        "name": "Heater",
+        "qualified_name": "CubeSatModel::Heater",
+        "sysml_type": "PartDefinition",
+        "doc": "Small electric heater that keeps the inside warm during eclipse."
+      }
+    },
+    {
+      "id": "941ce48b-1829-40cf-8837-1dd80fe40b02/3f5d354f-aca3-4b15-bfcc-493616150fb8",
+      "label": "Port",
+      "props": {
+        "sysml_id": "3f5d354f-aca3-4b15-bfcc-493616150fb8",
+        "name": "leftPanel.powerOut",
+        "direction": "out",
+        "port_def": "PowerPort"
+      }
+    },
+    {
+      "id": "5fd7d566-eba0-44f7-851b-3f4fcfce4c66/3f5d354f-aca3-4b15-bfcc-493616150fb8",
+      "label": "Port",
+      "props": {
+        "sysml_id": "3f5d354f-aca3-4b15-bfcc-493616150fb8",
+        "name": "rightPanel.powerOut",
+        "direction": "out",
+        "port_def": "PowerPort"
+      }
+    },
+    {
+      "id": "d692f468-09dc-4e17-b257-e7fc93145d91/51ce3da0-fe55-435d-b852-c7015a314453",
+      "label": "Port",
+      "props": {
+        "sysml_id": "51ce3da0-fe55-435d-b852-c7015a314453",
+        "name": "battery.powerIn",
+        "direction": "in",
+        "port_def": "PowerPort"
+      }
+    },
+    {
+      "id": "d692f468-09dc-4e17-b257-e7fc93145d91/2bacf52c-2200-494d-b4a5-1bebc674426f",
+      "label": "Port",
+      "props": {
+        "sysml_id": "2bacf52c-2200-494d-b4a5-1bebc674426f",
+        "name": "battery.powerOut",
+        "direction": "out",
+        "port_def": "PowerPort"
+      }
+    },
+    {
+      "id": "f1b46696-39e8-4090-9440-f5b2a9dac04c/0b3f5748-7b2a-4b1d-8246-6e22eaee2b1c",
+      "label": "Port",
+      "props": {
+        "sysml_id": "0b3f5748-7b2a-4b1d-8246-6e22eaee2b1c",
+        "name": "obc.powerIn",
+        "direction": "in",
+        "port_def": "PowerPort"
+      }
+    },
+    {
+      "id": "f1b46696-39e8-4090-9440-f5b2a9dac04c/e1612d30-a67b-4554-b10c-7827260363ad",
+      "label": "Port",
+      "props": {
+        "sysml_id": "e1612d30-a67b-4554-b10c-7827260363ad",
+        "name": "obc.imageIn",
+        "direction": "in",
+        "port_def": "DataPort"
+      }
+    },
+    {
+      "id": "f1b46696-39e8-4090-9440-f5b2a9dac04c/af58346c-9cac-4e52-aa1d-00a951d62e4a",
+      "label": "Port",
+      "props": {
+        "sysml_id": "af58346c-9cac-4e52-aa1d-00a951d62e4a",
+        "name": "obc.dataOut",
+        "direction": "out",
+        "port_def": "DataPort"
+      }
+    },
+    {
+      "id": "4c01b061-ccb3-48f3-9ef4-86a0589f19e2/234b47db-1ab2-4cc6-8cb1-e8d9024cbf05",
+      "label": "Port",
+      "props": {
+        "sysml_id": "234b47db-1ab2-4cc6-8cb1-e8d9024cbf05",
+        "name": "radio.powerIn",
+        "direction": "in",
+        "port_def": "PowerPort"
+      }
+    },
+    {
+      "id": "4c01b061-ccb3-48f3-9ef4-86a0589f19e2/952638c3-2879-4cab-8000-327a284fc1e3",
+      "label": "Port",
+      "props": {
+        "sysml_id": "952638c3-2879-4cab-8000-327a284fc1e3",
+        "name": "radio.dataIn",
+        "direction": "in",
+        "port_def": "DataPort"
+      }
+    },
+    {
+      "id": "35ad23e4-7e1e-4fd2-89d5-fea07f4a576b/e8419e7f-f67f-4840-a8a3-0810454e1f2d",
+      "label": "Port",
+      "props": {
+        "sysml_id": "e8419e7f-f67f-4840-a8a3-0810454e1f2d",
+        "name": "camera.powerIn",
+        "direction": "in",
+        "port_def": "PowerPort"
+      }
+    },
+    {
+      "id": "35ad23e4-7e1e-4fd2-89d5-fea07f4a576b/dda633d5-5beb-4879-a1f5-e8cc2ad1b2a1",
+      "label": "Port",
+      "props": {
+        "sysml_id": "dda633d5-5beb-4879-a1f5-e8cc2ad1b2a1",
+        "name": "camera.imageOut",
+        "direction": "out",
+        "port_def": "DataPort"
+      }
+    },
+    {
+      "id": "fa9b9e2c-9f53-4d05-9c29-731d4d8c7e9d/5425ce0b-6422-4ae7-9b1a-5f53df761368",
+      "label": "Port",
+      "props": {
+        "sysml_id": "5425ce0b-6422-4ae7-9b1a-5f53df761368",
+        "name": "heater.powerIn",
+        "direction": "in",
+        "port_def": "PowerPort"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "941ce48b-1829-40cf-8837-1dd80fe40b02",
+      "target": "941ce48b-1829-40cf-8837-1dd80fe40b02/3f5d354f-aca3-4b15-bfcc-493616150fb8",
+      "type": "HAS_PORT",
+      "props": {}
+    },
+    {
+      "source": "5fd7d566-eba0-44f7-851b-3f4fcfce4c66",
+      "target": "5fd7d566-eba0-44f7-851b-3f4fcfce4c66/3f5d354f-aca3-4b15-bfcc-493616150fb8",
+      "type": "HAS_PORT",
+      "props": {}
+    },
+    {
+      "source": "d692f468-09dc-4e17-b257-e7fc93145d91",
+      "target": "d692f468-09dc-4e17-b257-e7fc93145d91/51ce3da0-fe55-435d-b852-c7015a314453",
+      "type": "HAS_PORT",
+      "props": {}
+    },
+    {
+      "source": "d692f468-09dc-4e17-b257-e7fc93145d91",
+      "target": "d692f468-09dc-4e17-b257-e7fc93145d91/2bacf52c-2200-494d-b4a5-1bebc674426f",
+      "type": "HAS_PORT",
+      "props": {}
+    },
+    {
+      "source": "f1b46696-39e8-4090-9440-f5b2a9dac04c",
+      "target": "f1b46696-39e8-4090-9440-f5b2a9dac04c/0b3f5748-7b2a-4b1d-8246-6e22eaee2b1c",
+      "type": "HAS_PORT",
+      "props": {}
+    },
+    {
+      "source": "f1b46696-39e8-4090-9440-f5b2a9dac04c",
+      "target": "f1b46696-39e8-4090-9440-f5b2a9dac04c/e1612d30-a67b-4554-b10c-7827260363ad",
+      "type": "HAS_PORT",
+      "props": {}
+    },
+    {
+      "source": "f1b46696-39e8-4090-9440-f5b2a9dac04c",
+      "target": "f1b46696-39e8-4090-9440-f5b2a9dac04c/af58346c-9cac-4e52-aa1d-00a951d62e4a",
+      "type": "HAS_PORT",
+      "props": {}
+    },
+    {
+      "source": "4c01b061-ccb3-48f3-9ef4-86a0589f19e2",
+      "target": "4c01b061-ccb3-48f3-9ef4-86a0589f19e2/234b47db-1ab2-4cc6-8cb1-e8d9024cbf05",
+      "type": "HAS_PORT",
+      "props": {}
+    },
+    {
+      "source": "4c01b061-ccb3-48f3-9ef4-86a0589f19e2",
+      "target": "4c01b061-ccb3-48f3-9ef4-86a0589f19e2/952638c3-2879-4cab-8000-327a284fc1e3",
+      "type": "HAS_PORT",
+      "props": {}
+    },
+    {
+      "source": "35ad23e4-7e1e-4fd2-89d5-fea07f4a576b",
+      "target": "35ad23e4-7e1e-4fd2-89d5-fea07f4a576b/e8419e7f-f67f-4840-a8a3-0810454e1f2d",
+      "type": "HAS_PORT",
+      "props": {}
+    },
+    {
+      "source": "35ad23e4-7e1e-4fd2-89d5-fea07f4a576b",
+      "target": "35ad23e4-7e1e-4fd2-89d5-fea07f4a576b/dda633d5-5beb-4879-a1f5-e8cc2ad1b2a1",
+      "type": "HAS_PORT",
+      "props": {}
+    },
+    {
+      "source": "fa9b9e2c-9f53-4d05-9c29-731d4d8c7e9d",
+      "target": "fa9b9e2c-9f53-4d05-9c29-731d4d8c7e9d/5425ce0b-6422-4ae7-9b1a-5f53df761368",
+      "type": "HAS_PORT",
+      "props": {}
+    },
+    {
+      "source": "ea2c64ee-52cb-4b83-9f4e-bcbb30e4b090",
+      "target": "ff049094-5f55-4e1b-b04b-037e1577bda0",
+      "type": "TYPED_BY",
+      "props": {}
+    },
+    {
+      "source": "ddcfdadd-734e-489d-88ee-3295e692c504",
+      "target": "409847dd-3132-4268-9012-daa460180d79",
+      "type": "TYPED_BY",
+      "props": {}
+    },
+    {
+      "source": "ddcfdadd-734e-489d-88ee-3295e692c504",
+      "target": "ea2c64ee-52cb-4b83-9f4e-bcbb30e4b090",
+      "type": "PART_OF",
+      "props": {}
+    },
+    {
+      "source": "941ce48b-1829-40cf-8837-1dd80fe40b02",
+      "target": "811cd2b3-7f7a-497f-9059-f1b1ffe740c2",
+      "type": "TYPED_BY",
+      "props": {}
+    },
+    {
+      "source": "941ce48b-1829-40cf-8837-1dd80fe40b02",
+      "target": "ea2c64ee-52cb-4b83-9f4e-bcbb30e4b090",
+      "type": "PART_OF",
+      "props": {}
+    },
+    {
+      "source": "5fd7d566-eba0-44f7-851b-3f4fcfce4c66",
+      "target": "811cd2b3-7f7a-497f-9059-f1b1ffe740c2",
+      "type": "TYPED_BY",
+      "props": {}
+    },
+    {
+      "source": "5fd7d566-eba0-44f7-851b-3f4fcfce4c66",
+      "target": "ea2c64ee-52cb-4b83-9f4e-bcbb30e4b090",
+      "type": "PART_OF",
+      "props": {}
+    },
+    {
+      "source": "d692f468-09dc-4e17-b257-e7fc93145d91",
+      "target": "26d446e8-98d2-44b6-83ba-afd7d3cd7100",
+      "type": "TYPED_BY",
+      "props": {}
+    },
+    {
+      "source": "d692f468-09dc-4e17-b257-e7fc93145d91",
+      "target": "ea2c64ee-52cb-4b83-9f4e-bcbb30e4b090",
+      "type": "PART_OF",
+      "props": {}
+    },
+    {
+      "source": "f1b46696-39e8-4090-9440-f5b2a9dac04c",
+      "target": "e423b876-1dc8-4cf4-be7d-3f142d0a571f",
+      "type": "TYPED_BY",
+      "props": {}
+    },
+    {
+      "source": "f1b46696-39e8-4090-9440-f5b2a9dac04c",
+      "target": "ea2c64ee-52cb-4b83-9f4e-bcbb30e4b090",
+      "type": "PART_OF",
+      "props": {}
+    },
+    {
+      "source": "4c01b061-ccb3-48f3-9ef4-86a0589f19e2",
+      "target": "0ead1eab-1d34-4bf9-a4a5-2e3a2336beb4",
+      "type": "TYPED_BY",
+      "props": {}
+    },
+    {
+      "source": "4c01b061-ccb3-48f3-9ef4-86a0589f19e2",
+      "target": "ea2c64ee-52cb-4b83-9f4e-bcbb30e4b090",
+      "type": "PART_OF",
+      "props": {}
+    },
+    {
+      "source": "35ad23e4-7e1e-4fd2-89d5-fea07f4a576b",
+      "target": "3e1f7745-eeea-45d6-a73d-9cd0a2ae787e",
+      "type": "TYPED_BY",
+      "props": {}
+    },
+    {
+      "source": "35ad23e4-7e1e-4fd2-89d5-fea07f4a576b",
+      "target": "ea2c64ee-52cb-4b83-9f4e-bcbb30e4b090",
+      "type": "PART_OF",
+      "props": {}
+    },
+    {
+      "source": "fa9b9e2c-9f53-4d05-9c29-731d4d8c7e9d",
+      "target": "f0e2023d-a810-447b-90a5-bdd7c66401a5",
+      "type": "TYPED_BY",
+      "props": {}
+    },
+    {
+      "source": "fa9b9e2c-9f53-4d05-9c29-731d4d8c7e9d",
+      "target": "ea2c64ee-52cb-4b83-9f4e-bcbb30e4b090",
+      "type": "PART_OF",
+      "props": {}
+    },
+    {
+      "source": "3fd2c0ed-775b-4a63-8c82-8ef4f29f0900",
+      "target": "613fc8f8-12f5-4769-9109-d6da04586e72",
+      "type": "TYPED_BY",
+      "props": {}
+    },
+    {
+      "source": "263bf9a5-93b2-442b-957f-21a206a6579e",
+      "target": "ec977e45-78bb-4fe2-9411-67430d6caa8c",
+      "type": "TYPED_BY",
+      "props": {}
+    },
+    {
+      "source": "3cf7223d-dbb2-4709-8b08-77a1ce726246",
+      "target": "e986b6fa-d8b1-4405-b5fe-b47b28e45fcb",
+      "type": "TYPED_BY",
+      "props": {}
+    },
+    {
+      "source": "8887e69c-4c1a-462b-ba0f-430def9fbf7c",
+      "target": "e16f9021-f6cb-42a3-8a21-2d5c29856dc7",
+      "type": "TYPED_BY",
+      "props": {}
+    },
+    {
+      "source": "9f6577db-8651-46e5-a854-638eb95c7006",
+      "target": "df58678e-0252-4510-835e-2bb2614af57b",
+      "type": "TYPED_BY",
+      "props": {}
+    },
+    {
+      "source": "ee935d4a-fe61-4213-b858-213c6df3a54f",
+      "target": "6d6f4832-0fdd-490a-a38b-8fbd298c8a21",
+      "type": "TYPED_BY",
+      "props": {}
+    },
+    {
+      "source": "230ef79a-b5f1-4c53-a465-6cc1d054c25c",
+      "target": "67e63f42-9a9f-4f2c-8fe3-52bbad7bce0f",
+      "type": "TYPED_BY",
+      "props": {}
+    },
+    {
+      "source": "cb1f4036-a3ff-43dd-944a-cb993b0e9823",
+      "target": "855d01d2-fa31-4d7b-a95b-3d5bfc0654e5",
+      "type": "TYPED_BY",
+      "props": {}
+    },
+    {
+      "source": "84488461-d252-4ef3-acf0-023b87d14818",
+      "target": "54a58f3a-88a0-453e-b194-6920819fadc4",
+      "type": "TYPED_BY",
+      "props": {}
+    },
+    {
+      "source": "2576141d-b683-43b5-8bb2-efddaeb4c81b",
+      "target": "12fdeb7e-3369-4a71-a335-26af3396401c",
+      "type": "TYPED_BY",
+      "props": {}
+    },
+    {
+      "source": "efbc8a71-51c6-47bc-bd44-2e82e17f09d5",
+      "target": "1bc23811-ad1a-467a-9798-955552074361",
+      "type": "TYPED_BY",
+      "props": {}
+    },
+    {
+      "source": "941ce48b-1829-40cf-8837-1dd80fe40b02/3f5d354f-aca3-4b15-bfcc-493616150fb8",
+      "target": "d692f468-09dc-4e17-b257-e7fc93145d91/51ce3da0-fe55-435d-b852-c7015a314453",
+      "type": "CONNECTED_TO",
+      "props": {
+        "sysml_id": "74c0eb75-745b-47bd-b884-021c35df7fdd"
+      }
+    },
+    {
+      "source": "941ce48b-1829-40cf-8837-1dd80fe40b02",
+      "target": "d692f468-09dc-4e17-b257-e7fc93145d91",
+      "type": "POWERS",
+      "props": {
+        "sysml_id": "74c0eb75-745b-47bd-b884-021c35df7fdd"
+      }
+    },
+    {
+      "source": "5fd7d566-eba0-44f7-851b-3f4fcfce4c66/3f5d354f-aca3-4b15-bfcc-493616150fb8",
+      "target": "d692f468-09dc-4e17-b257-e7fc93145d91/51ce3da0-fe55-435d-b852-c7015a314453",
+      "type": "CONNECTED_TO",
+      "props": {
+        "sysml_id": "9ff0df6b-a599-41e9-a972-f6a4053be795"
+      }
+    },
+    {
+      "source": "5fd7d566-eba0-44f7-851b-3f4fcfce4c66",
+      "target": "d692f468-09dc-4e17-b257-e7fc93145d91",
+      "type": "POWERS",
+      "props": {
+        "sysml_id": "9ff0df6b-a599-41e9-a972-f6a4053be795"
+      }
+    },
+    {
+      "source": "d692f468-09dc-4e17-b257-e7fc93145d91/2bacf52c-2200-494d-b4a5-1bebc674426f",
+      "target": "f1b46696-39e8-4090-9440-f5b2a9dac04c/0b3f5748-7b2a-4b1d-8246-6e22eaee2b1c",
+      "type": "CONNECTED_TO",
+      "props": {
+        "sysml_id": "a8f0807b-9ee5-4824-8e39-4a5c2dcb9662"
+      }
+    },
+    {
+      "source": "d692f468-09dc-4e17-b257-e7fc93145d91",
+      "target": "f1b46696-39e8-4090-9440-f5b2a9dac04c",
+      "type": "POWERS",
+      "props": {
+        "sysml_id": "a8f0807b-9ee5-4824-8e39-4a5c2dcb9662"
+      }
+    },
+    {
+      "source": "d692f468-09dc-4e17-b257-e7fc93145d91/2bacf52c-2200-494d-b4a5-1bebc674426f",
+      "target": "4c01b061-ccb3-48f3-9ef4-86a0589f19e2/234b47db-1ab2-4cc6-8cb1-e8d9024cbf05",
+      "type": "CONNECTED_TO",
+      "props": {
+        "sysml_id": "8dc717ce-10fc-4fc7-a2b1-85d91912ea74"
+      }
+    },
+    {
+      "source": "d692f468-09dc-4e17-b257-e7fc93145d91",
+      "target": "4c01b061-ccb3-48f3-9ef4-86a0589f19e2",
+      "type": "POWERS",
+      "props": {
+        "sysml_id": "8dc717ce-10fc-4fc7-a2b1-85d91912ea74"
+      }
+    },
+    {
+      "source": "d692f468-09dc-4e17-b257-e7fc93145d91/2bacf52c-2200-494d-b4a5-1bebc674426f",
+      "target": "35ad23e4-7e1e-4fd2-89d5-fea07f4a576b/e8419e7f-f67f-4840-a8a3-0810454e1f2d",
+      "type": "CONNECTED_TO",
+      "props": {
+        "sysml_id": "4f8ec00d-1deb-423f-aa82-476195f7b739"
+      }
+    },
+    {
+      "source": "d692f468-09dc-4e17-b257-e7fc93145d91",
+      "target": "35ad23e4-7e1e-4fd2-89d5-fea07f4a576b",
+      "type": "POWERS",
+      "props": {
+        "sysml_id": "4f8ec00d-1deb-423f-aa82-476195f7b739"
+      }
+    },
+    {
+      "source": "35ad23e4-7e1e-4fd2-89d5-fea07f4a576b/dda633d5-5beb-4879-a1f5-e8cc2ad1b2a1",
+      "target": "f1b46696-39e8-4090-9440-f5b2a9dac04c/e1612d30-a67b-4554-b10c-7827260363ad",
+      "type": "CONNECTED_TO",
+      "props": {
+        "sysml_id": "0a559ab0-1901-446d-a7b8-5db90690a805"
+      }
+    },
+    {
+      "source": "35ad23e4-7e1e-4fd2-89d5-fea07f4a576b",
+      "target": "f1b46696-39e8-4090-9440-f5b2a9dac04c",
+      "type": "SENDS_DATA",
+      "props": {
+        "sysml_id": "0a559ab0-1901-446d-a7b8-5db90690a805"
+      }
+    },
+    {
+      "source": "f1b46696-39e8-4090-9440-f5b2a9dac04c/af58346c-9cac-4e52-aa1d-00a951d62e4a",
+      "target": "4c01b061-ccb3-48f3-9ef4-86a0589f19e2/952638c3-2879-4cab-8000-327a284fc1e3",
+      "type": "CONNECTED_TO",
+      "props": {
+        "sysml_id": "7625aabf-e983-4efd-81ef-8f28923e528d"
+      }
+    },
+    {
+      "source": "f1b46696-39e8-4090-9440-f5b2a9dac04c",
+      "target": "4c01b061-ccb3-48f3-9ef4-86a0589f19e2",
+      "type": "SENDS_DATA",
+      "props": {
+        "sysml_id": "7625aabf-e983-4efd-81ef-8f28923e528d"
+      }
+    },
+    {
+      "source": "ea2c64ee-52cb-4b83-9f4e-bcbb30e4b090",
+      "target": "1db75cae-f6ee-4a53-a280-fa0290cd20da",
+      "type": "EXHIBITS",
+      "props": {
+        "sysml_id": "6b09d825-1419-4392-8173-bb85066d1953"
+      }
+    },
+    {
+      "source": "d692f468-09dc-4e17-b257-e7fc93145d91/2bacf52c-2200-494d-b4a5-1bebc674426f",
+      "target": "fa9b9e2c-9f53-4d05-9c29-731d4d8c7e9d/5425ce0b-6422-4ae7-9b1a-5f53df761368",
+      "type": "CONNECTED_TO",
+      "props": {
+        "sysml_id": "648c20fc-a051-4ffa-bbf7-ef1ec361bb4a"
+      }
+    },
+    {
+      "source": "d692f468-09dc-4e17-b257-e7fc93145d91",
+      "target": "fa9b9e2c-9f53-4d05-9c29-731d4d8c7e9d",
+      "type": "POWERS",
+      "props": {
+        "sysml_id": "648c20fc-a051-4ffa-bbf7-ef1ec361bb4a"
+      }
+    },
+    {
+      "source": "ea2c64ee-52cb-4b83-9f4e-bcbb30e4b090",
+      "target": "3fd2c0ed-775b-4a63-8c82-8ef4f29f0900",
+      "type": "SATISFIES",
+      "props": {
+        "sysml_id": "2d381d7f-6fc8-4b07-babf-47d911b4b715"
+      }
+    },
+    {
+      "source": "d692f468-09dc-4e17-b257-e7fc93145d91",
+      "target": "263bf9a5-93b2-442b-957f-21a206a6579e",
+      "type": "SATISFIES",
+      "props": {
+        "sysml_id": "5cd179df-a6e7-4da1-aa29-a3612fb255c2"
+      }
+    },
+    {
+      "source": "35ad23e4-7e1e-4fd2-89d5-fea07f4a576b",
+      "target": "43c2033f-2de1-4041-967d-8cbb3dbcc085",
+      "type": "SATISFIES",
+      "props": {
+        "sysml_id": "6d9cd207-3b50-4610-8541-f390162afb26"
+      }
+    },
+    {
+      "source": "4c01b061-ccb3-48f3-9ef4-86a0589f19e2",
+      "target": "43c2033f-2de1-4041-967d-8cbb3dbcc085",
+      "type": "SATISFIES",
+      "props": {
+        "sysml_id": "a13174ad-af63-490c-8b7a-2fe7ed52af0b"
+      }
+    },
+    {
+      "source": "e986b6fa-d8b1-4405-b5fe-b47b28e45fcb",
+      "target": "3fd2c0ed-775b-4a63-8c82-8ef4f29f0900",
+      "type": "VERIFIES",
+      "props": {
+        "sysml_id": "3fd56a63-3e35-4ec9-b383-fa4532d0d2a4"
+      }
+    },
+    {
+      "source": "e16f9021-f6cb-42a3-8a21-2d5c29856dc7",
+      "target": "263bf9a5-93b2-442b-957f-21a206a6579e",
+      "type": "VERIFIES",
+      "props": {
+        "sysml_id": "4531f017-7c14-4e39-9973-1b6fd53c25ef"
+      }
+    },
+    {
+      "source": "df58678e-0252-4510-835e-2bb2614af57b",
+      "target": "43c2033f-2de1-4041-967d-8cbb3dbcc085",
+      "type": "VERIFIES",
+      "props": {
+        "sysml_id": "12ba34d2-9724-458c-8ced-b040acc0fc2d"
+      }
+    },
+    {
+      "source": "6d6f4832-0fdd-490a-a38b-8fbd298c8a21",
+      "target": "fdb6466d-f372-403e-bdd6-1e707c463ecc",
+      "type": "VERIFIES",
+      "props": {
+        "sysml_id": "b50e90af-11f4-4d02-8743-6313fd2a5d61"
+      }
+    },
+    {
+      "source": "cc71e9c4-3710-4ec4-a230-40d27dad44cf",
+      "target": "67e63f42-9a9f-4f2c-8fe3-52bbad7bce0f",
+      "type": "ACTOR_OF",
+      "props": {}
+    },
+    {
+      "source": "673aed7a-28e2-423a-84f8-ac27698485dd",
+      "target": "67e63f42-9a9f-4f2c-8fe3-52bbad7bce0f",
+      "type": "ACTOR_OF",
+      "props": {}
+    },
+    {
+      "source": "67e63f42-9a9f-4f2c-8fe3-52bbad7bce0f",
+      "target": "ff049094-5f55-4e1b-b04b-037e1577bda0",
+      "type": "HAS_SUBJECT",
+      "props": {}
+    },
+    {
+      "source": "cb1f4036-a3ff-43dd-944a-cb993b0e9823",
+      "target": "84488461-d252-4ef3-acf0-023b87d14818",
+      "type": "NEXT",
+      "props": {
+        "sysml_id": "d22215f0-02ec-488c-960a-ccf3887927b7"
+      }
+    },
+    {
+      "source": "84488461-d252-4ef3-acf0-023b87d14818",
+      "target": "2576141d-b683-43b5-8bb2-efddaeb4c81b",
+      "type": "NEXT",
+      "props": {
+        "sysml_id": "8ee73648-46fe-49f6-8a13-c76fc3e30866"
+      }
+    },
+    {
+      "source": "cb1f4036-a3ff-43dd-944a-cb993b0e9823",
+      "target": "35ad23e4-7e1e-4fd2-89d5-fea07f4a576b",
+      "type": "ALLOCATED_TO",
+      "props": {
+        "sysml_id": "45fccf58-bedf-414d-bde7-80885e607643"
+      }
+    },
+    {
+      "source": "84488461-d252-4ef3-acf0-023b87d14818",
+      "target": "f1b46696-39e8-4090-9440-f5b2a9dac04c",
+      "type": "ALLOCATED_TO",
+      "props": {
+        "sysml_id": "2d4342d2-71e6-494b-aac5-d9320b9a73b0"
+      }
+    },
+    {
+      "source": "2576141d-b683-43b5-8bb2-efddaeb4c81b",
+      "target": "4c01b061-ccb3-48f3-9ef4-86a0589f19e2",
+      "type": "ALLOCATED_TO",
+      "props": {
+        "sysml_id": "84d7c2b1-118d-4195-9886-3bf39ccfbf52"
+      }
+    },
+    {
+      "source": "1951b1d0-e7ba-4dab-9e81-59c378e5e489",
+      "target": "a7b41850-7770-4f83-97ce-7a8e6e2e04ba",
+      "type": "TRANSITION",
+      "props": {
+        "name": "safe_to_nominal",
+        "trigger": "PowerOk",
+        "sysml_id": "3dd7e8fe-e92c-40a2-bedd-d97bfedcf5dd"
+      }
+    },
+    {
+      "source": "a7b41850-7770-4f83-97ce-7a8e6e2e04ba",
+      "target": "93bb3035-4bad-4da5-98b8-dffd09102169",
+      "type": "TRANSITION",
+      "props": {
+        "name": "nominal_to_imaging",
+        "trigger": "ImagingCommand",
+        "sysml_id": "e92d9275-50b7-462a-83ed-74372aaaad62"
+      }
+    },
+    {
+      "source": "93bb3035-4bad-4da5-98b8-dffd09102169",
+      "target": "a7b41850-7770-4f83-97ce-7a8e6e2e04ba",
+      "type": "TRANSITION",
+      "props": {
+        "name": "imaging_to_nominal",
+        "trigger": "ImageSent",
+        "sysml_id": "e2b9418f-71d1-4382-b576-637f43fd3574"
+      }
+    },
+    {
+      "source": "a7b41850-7770-4f83-97ce-7a8e6e2e04ba",
+      "target": "1951b1d0-e7ba-4dab-9e81-59c378e5e489",
+      "type": "TRANSITION",
+      "props": {
+        "name": "nominal_to_safe",
+        "trigger": "BatteryLow",
+        "sysml_id": "be88adcb-e342-4a4f-a4c8-912bb3dd9458"
+      }
+    },
+    {
+      "source": "93bb3035-4bad-4da5-98b8-dffd09102169",
+      "target": "1951b1d0-e7ba-4dab-9e81-59c378e5e489",
+      "type": "TRANSITION",
+      "props": {
+        "name": "imaging_to_safe",
+        "trigger": "BatteryLow",
+        "sysml_id": "8edc823a-d1a4-4e76-8d95-03874b979cc7"
+      }
+    },
+    {
+      "source": "cc71e9c4-3710-4ec4-a230-40d27dad44cf",
+      "target": "673aed7a-28e2-423a-84f8-ac27698485dd",
+      "type": "MESSAGE",
+      "props": {
+        "name": "requestMsg",
+        "payload": "ImagingCommand",
+        "sysml_id": "9adb19dc-db31-435e-9e76-0354948a8d01"
+      }
+    },
+    {
+      "source": "673aed7a-28e2-423a-84f8-ac27698485dd",
+      "target": "ff049094-5f55-4e1b-b04b-037e1577bda0",
+      "type": "MESSAGE",
+      "props": {
+        "name": "uplinkMsg",
+        "payload": "ImagingCommand",
+        "sysml_id": "ebc6e82f-631e-4c63-8f52-2c213343f6f1"
+      }
+    },
+    {
+      "source": "ff049094-5f55-4e1b-b04b-037e1577bda0",
+      "target": "673aed7a-28e2-423a-84f8-ac27698485dd",
+      "type": "MESSAGE",
+      "props": {
+        "name": "downlinkMsg",
+        "payload": "DataPacket",
+        "sysml_id": "31d73ca9-93e4-4d81-ad4e-03f334fe4ed4"
+      }
+    },
+    {
+      "source": "673aed7a-28e2-423a-84f8-ac27698485dd",
+      "target": "cc71e9c4-3710-4ec4-a230-40d27dad44cf",
+      "type": "MESSAGE",
+      "props": {
+        "name": "deliverMsg",
+        "payload": "Image",
+        "sysml_id": "f848dfa8-2923-41f9-b517-77bd499bc836"
+      }
+    },
+    {
+      "source": "fa9b9e2c-9f53-4d05-9c29-731d4d8c7e9d",
+      "target": "fdb6466d-f372-403e-bdd6-1e707c463ecc",
+      "type": "SATISFIES",
+      "props": {
+        "sysml_id": "f352d011-40ea-4304-bb17-71c162a35cd7"
+      }
+    }
+  ]
+}

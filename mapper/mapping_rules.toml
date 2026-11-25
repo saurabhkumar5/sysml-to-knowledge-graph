@@ -1,0 +1,74 @@
+# =====================================================================
+#  Mapping rules: SysML v2 (JSON from the SysML v2 API) -> knowledge graph
+#  This file is the "dictionary" of the mapper. Change the rules here,
+#  not in the Python code (configurable / semi-automatic mapping).
+# =====================================================================
+
+# ---------------------------------------------------------------------
+# Rule 1: element -> NODE      (SysML @type = graph label)
+# ---------------------------------------------------------------------
+[nodes]
+PartDefinition             = "PartDef"
+PartUsage                  = "Part"
+PortDefinition             = "PortDef"
+RequirementDefinition      = "RequirementDef"
+RequirementUsage           = "Requirement"
+VerificationCaseDefinition = "VerificationDef"
+VerificationCaseUsage      = "Verification"
+ActionDefinition           = "ActionDef"
+ActionUsage                = "Action"
+StateDefinition            = "StateDef"
+StateUsage                 = "State"
+UseCaseDefinition          = "UseCaseDef"
+UseCaseUsage               = "UseCase"
+ItemDefinition             = "ItemDef"
+AttributeDefinition        = "Signal"
+OccurrenceDefinition       = "Scenario"
+
+# Keep a usage only when its owner has one of these types.
+# (Removes local copies inside requirements, scenarios, objectives ...)
+[owner_filter]
+PartUsage        = ["Package", "PartUsage"]
+RequirementUsage = ["Package"]
+ActionUsage      = ["Package", "ActionDefinition"]
+
+# ---------------------------------------------------------------------
+# Rule 2: reference (@id) -> EDGE
+# ---------------------------------------------------------------------
+[reference_edges]
+definition = "TYPED_BY"     # usage -> definition
+owner      = "PART_OF"      # part  -> parent part (only Part -> Part)
+
+# ---------------------------------------------------------------------
+# Rule 3: relationship element -> EDGE
+# ---------------------------------------------------------------------
+[relationship_edges]
+ConnectionUsage                   = "CONNECTED_TO"   # port  -> port
+SatisfyRequirementUsage           = "SATISFIES"      # part  -> requirement
+RequirementVerificationMembership = "VERIFIES"       # test  -> requirement
+AllocationUsage                   = "ALLOCATED_TO"   # action -> part
+TransitionUsage                   = "TRANSITION"     # state -> state
+SuccessionAsUsage                 = "NEXT"           # action -> action
+ExhibitStateUsage                 = "EXHIBITS"       # part  -> state machine
+FlowUsage                         = "MESSAGE"        # participant -> participant
+
+# Simplified analysis view: port connection -> direct part-to-part edge
+[port_flow_edges]
+PowerPort = "POWERS"
+DataPort  = "SENDS_DATA"
+
+# ---------------------------------------------------------------------
+# Rule 4: value -> PROPERTY
+# Units are elements of the SysML v2 standard library (SI). SysON returns
+# only their @id, so the mapper translates the @id to a unit symbol here.
+# ---------------------------------------------------------------------
+[units]
+"bb1d79c2-1306-5b35-a807-93e46fc3431c" = "kg"
+"90b27337-d309-5374-a129-1a12995e4335" = "W"
+"e34324cf-046e-5edc-a734-84266dd2e33f" = "J"
+"0c539f7c-20a1-520d-bae0-f3f855517aea" = "s"
+
+# ---------------------------------------------------------------------
+# Rule 5: everything else (Membership, FeatureTyping, expressions ...)
+# is NOT a node. It is only read to resolve the rules above.
+# ---------------------------------------------------------------------

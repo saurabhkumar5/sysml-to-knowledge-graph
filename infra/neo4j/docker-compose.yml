@@ -1,0 +1,22 @@
+# Neo4j = graph database for the knowledge graph (step 7)
+# Start : docker compose up -d
+# Open  : http://localhost:7474   (Neo4j Browser, login neo4j / cubesat123)
+# Load  : docker compose exec neo4j cypher-shell -u neo4j -p cubesat123 -f /import/graph.cypher
+# Stop  : docker compose stop      (keeps the data)
+services:
+  neo4j:
+    image: neo4j:5.26-community
+    ports:
+      - "7474:7474"   # browser (web UI)
+      - "7687:7687"   # bolt (used by Python and cypher-shell)
+    environment:
+      NEO4J_AUTH: neo4j/cubesat123
+      # small memory settings so the laptop stays responsive
+      NEO4J_server_memory_heap_initial__size: 256m
+      NEO4J_server_memory_heap_max__size: 512m
+      NEO4J_server_memory_pagecache_size: 256m
+    volumes:
+      - neo4j-data:/data
+      - ../../data:/import:ro   # graph.cypher from the mapper
+volumes:
+  neo4j-data:
